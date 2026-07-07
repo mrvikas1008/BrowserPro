@@ -19,5 +19,5 @@ class BrowserViewModel(application: Application) : AndroidViewModel(application)
         tabs.value = currentList
         currentTab.value = tab
     }
-}
+} 
  
