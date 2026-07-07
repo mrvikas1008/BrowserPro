@@ -111,5 +111,5 @@
         </LinearLayout>
     </com.google.android.material.bottomappbar.BottomAppBar>
 
-</androidx.constraintlayout.widget.ConstraintLayout> 
+</androidx.constraintlayout.widget.ConstraintLayout>  
  
