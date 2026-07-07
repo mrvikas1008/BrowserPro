@@ -14,17 +14,16 @@ jobs:
         java-version: '17'
         distribution: 'zulu'
 
-    - name: Grant Execute Permission for Gradle
+    - name: Create Gradle Wrapper
       run: |
-        chmod +x gradlew || true
-        touch gradlew
+        gradle wrapper --gradle-version 8.2
+        chmod +x gradlew
 
     - name: Build Debug APK
-      run: ./gradlew assembleDebug || echo "Gradle build triggered"
+      run: ./gradlew assembleDebug
 
     - name: Upload Finished APK
       uses: actions/upload-artifact@v4
       with:
         name: Browser-Pro-APK
         path: app/build/outputs/apk/debug/app-debug.apk
- 
